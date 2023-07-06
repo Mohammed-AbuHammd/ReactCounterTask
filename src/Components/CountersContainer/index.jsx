@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Counter from "../Counter";
+import './style.css'
 class CountersContainer extends Component {
   state = {
     counters: [0, 0, 0, 0],
@@ -23,6 +24,8 @@ class CountersContainer extends Component {
 
   render() {
     const { counters } = this.state;
+    const total = counters.reduce((acc, counter) => acc + counter, 0);
+
     return (
       <div>
         <div className="counters__container">
@@ -36,8 +39,12 @@ class CountersContainer extends Component {
             />
           ))}
         </div>
+        <div className="total__value">
+          <h4>Total: <span>{total}</span></h4>
+        </div>
       </div>
     );
   }
 }
+
 export default CountersContainer;

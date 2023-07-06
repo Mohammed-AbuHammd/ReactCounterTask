@@ -1,0 +1,9 @@
+.total__value{
+    text-align: left;
+    margin: 100px;
+    font-size: 24px;
+
+}
+.total__value span{
+    color: darkgreen;
+}
